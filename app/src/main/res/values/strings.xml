@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NoteBook</string>
+    <string name="note">记事</string>
+    <string name="setting">设置</string>
 </resources>
