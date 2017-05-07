@@ -5,23 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="com.example.administrator.notebook.MainActivity">
     <android.support.design.widget.AppBarLayout
-        android:fitsSystemWindows="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <android.support.v7.widget.Toolbar
             app:layout_scrollFlags="scroll|enterAlways"
             android:id="@+id/main_toolbar"
+            app:theme="@style/ToolBarTheme"
+            app:popupTheme="@style/ToolbarPopupTheme"
             android:background="?attr/colorPrimary"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"/>
+            android:layout_height="45dp"/>
     </android.support.design.widget.AppBarLayout>
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></FrameLayout>
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_view"
-        app:itemBackground="@color/colorPrimary"
-        app:itemIconTint="@android:color/white"
-        app:itemTextColor="@android:color/white"
+        app:itemBackground="@android:color/white"
+        app:itemIconTint="@android:color/darker_gray"
+        app:itemTextColor="@android:color/darker_gray"
         app:menu="@menu/bottom_menu"
         android:layout_gravity="bottom"
         android:layout_width="match_parent"

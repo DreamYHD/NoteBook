@@ -11,8 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.baozi.Zxing.CaptureActivity;
-import com.baozi.Zxing.ZXingConstants;
+
+
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import butterknife.BindView;
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         setSupportActionBar(mMainToolbar);
+
         mRxPermissions=new RxPermissions(this);
         mRxPermissions.request(Manifest.permission.CAMERA)
                 .subscribe(new Observer<Boolean>() {
@@ -50,8 +51,6 @@ public class MainActivity extends AppCompatActivity {
                     public void onNext(Boolean value) {
                         if (value){
                             Toast.makeText(MainActivity.this, "success", Toast.LENGTH_SHORT).show();
-
-
                         }
 
                     }
@@ -66,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
+
 
 
     }
@@ -85,10 +85,6 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.float_action_main)
     public void onViewClicked() {
 
-        Intent intent = new Intent(MainActivity.this, CaptureActivity.class);
-        //是不是显示历史记录按钮
-        intent.putExtra(ZXingConstants.ScanIsShowHistory,true);
-        startActivityForResult(intent, ZXingConstants.ScanRequestCode);
 
     }
 }

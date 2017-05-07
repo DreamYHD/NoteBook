@@ -4,5 +4,5 @@ package com.example.administrator.notebook.base;
  * Created by dreamY on 2017/5/6.
  */
 
-public class BaseModel {
+public interface BaseModel {
 }

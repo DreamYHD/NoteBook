@@ -2,4 +2,6 @@
     <string name="app_name">NoteBook</string>
     <string name="note">记事</string>
     <string name="setting">设置</string>
+    <string name="plan">计划</string>
+    <string name="photo">相册</string>
 </resources>

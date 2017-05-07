@@ -8,9 +8,9 @@
     <item
         android:id="@+id/photo_bottom_menu"
         android:icon="@drawable/photo_bottom"
-        android:title="相册"/>
+        android:title="@string/photo"/>
     <item
         android:id="@+id/qrcode_bottom_menu"
         android:icon="@drawable/sacn_bottom"
-        android:title="二维码"/>
+        android:title="@string/plan"/>
 </menu>
