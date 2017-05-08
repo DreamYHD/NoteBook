@@ -21,7 +21,6 @@ public abstract class BaseMvpFragment<P extends BasePresenter,M extends BaseMode
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View mView=inflater.inflate(getLayoutId(),container,false);
-
         mPresenter= TUtils.getT(this,0);
         mModel=TUtils.getT(this,1);
         initChildView(mView,savedInstanceState);
