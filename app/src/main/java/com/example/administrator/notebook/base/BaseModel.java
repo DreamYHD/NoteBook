@@ -5,4 +5,5 @@ package com.example.administrator.notebook.base;
  */
 
 public interface BaseModel {
+    // TODO: 2017/5/12 replace with you logic  
 }

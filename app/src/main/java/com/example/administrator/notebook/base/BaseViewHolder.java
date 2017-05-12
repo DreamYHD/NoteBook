@@ -38,8 +38,6 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
 
         View mView=getView(viewId);
         mView.setOnClickListener(mOnClickListener);
-
-
     }
 
 }

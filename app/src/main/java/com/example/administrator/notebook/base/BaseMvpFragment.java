@@ -22,8 +22,6 @@ public abstract class BaseMvpFragment<P extends BasePresenter,M extends BaseMode
             mPresenter.attach(this,mModel);
         }
     }
-
-
     @Override
     public void onDestroy() {
         super.onDestroy();

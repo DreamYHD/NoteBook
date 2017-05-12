@@ -22,8 +22,6 @@ import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
 public class MainActivity extends AppCompatActivity {
-    RxPermissions mRxPermissions;
-
 
     @BindView(R.id.main_toolbar)
     Toolbar mMainToolbar;
@@ -38,33 +36,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         setSupportActionBar(mMainToolbar);
-
-        mRxPermissions=new RxPermissions(this);
-        mRxPermissions.request(Manifest.permission.CAMERA)
-                .subscribe(new Observer<Boolean>() {
-                    @Override
-                    public void onSubscribe(Disposable d) {
-
-                    }
-
-                    @Override
-                    public void onNext(Boolean value) {
-                        if (value){
-                            Toast.makeText(MainActivity.this, "success", Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-
-                    }
-
-                    @Override
-                    public void onComplete() {
-
-                    }
-                });
 
 
 

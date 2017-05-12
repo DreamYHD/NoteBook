@@ -8,6 +8,5 @@ import android.view.ViewGroup;
  */
 
 public interface BaseView {
-
-
+    // TODO: 2017/5/12 replace with your logic  
 }
