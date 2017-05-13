@@ -1,4 +1,4 @@
-package com.example.administrator.notebook.function.planFunction;
+package com.example.administrator.notebook.function.planFunction.local;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
