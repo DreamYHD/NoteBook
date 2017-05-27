@@ -9,12 +9,12 @@ import com.example.administrator.notebook.local.LocalManager;
 
 public class WritingDataMamager extends BaseData<WritingBean,WritingBeanDao> {
     @Override
-    protected WritingBeanDao getBeanDao() {
+    public WritingBeanDao getBeanDao() {
         return LocalManager.getInstance().getDaoSession().getWritingBeanDao();
     }
 
     @Override
-    protected void update(long id, WritingBean mWritingBean) {
+    public void update(long id, WritingBean mWritingBean) {
         WritingBean m=findById(id);
         m.setTime(mWritingBean.getTime());
         m.setTitle(mWritingBean.getTitle());
@@ -22,7 +22,7 @@ public class WritingDataMamager extends BaseData<WritingBean,WritingBeanDao> {
     }
 
     @Override
-    protected WritingBean findById(long id) {
+    public WritingBean findById(long id) {
         return getBeanDao().queryBuilder()
                 .where(WritingBeanDao.Properties.Id.eq(id))
                 .build()

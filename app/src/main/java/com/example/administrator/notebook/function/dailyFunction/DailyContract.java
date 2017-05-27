@@ -16,7 +16,5 @@ public  interface DailyContract {
 
     }
      class Presenter extends BasePresenter<View,Model>{
-
-
     }
 }

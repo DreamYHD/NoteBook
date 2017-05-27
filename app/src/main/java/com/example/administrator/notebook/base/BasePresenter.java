@@ -11,12 +11,8 @@ public class BasePresenter<V extends BaseView,M extends BaseModel> {
     protected  M mModel;
 
     protected void attach(V mV,M mM){
-        if (mV == null) {
-            mView=mV;
-        }
-        if (mM == null) {
-            mModel=mM;
-        }
+        this.mView=mV;
+        this.mModel=mM;
     }
     protected void deatch(){
         if (mView != null) {

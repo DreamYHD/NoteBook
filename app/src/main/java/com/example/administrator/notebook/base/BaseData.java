@@ -11,17 +11,17 @@ import java.util.List;
 public abstract class BaseData<T,V extends AbstractDao> {
 
 
-    protected abstract V getBeanDao();
-    protected abstract void update(long id,T mT);
-    protected abstract T findById(long id);
+    public abstract V getBeanDao();
+    public abstract void update(long id,T mT);
+    public abstract T findById(long id);
 
-    protected void insert(T mT){
+    public void insert(T mT){
         getBeanDao().insert(mT);
     }
-    protected void remove(T mT){
+    public void remove(T mT){
         getBeanDao().delete(mT);
     }
-    protected List<T> queryData(){
+    public List<T> queryData(){
        return getBeanDao().loadAll();
     }
 

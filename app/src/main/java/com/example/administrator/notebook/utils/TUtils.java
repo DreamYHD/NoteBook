@@ -1,5 +1,7 @@
 package com.example.administrator.notebook.utils;
 
+import android.support.annotation.Nullable;
+
 import java.lang.reflect.ParameterizedType;
 
 /**
@@ -7,7 +9,8 @@ import java.lang.reflect.ParameterizedType;
  */
 
 public class TUtils {
-  public static <T>T getT(Object mO,int id){
+  @Nullable
+  public static <T>T getT(Object mO, int id){
 
       try {
           return ((Class<T>)((ParameterizedType)mO.getClass().getGenericSuperclass())
