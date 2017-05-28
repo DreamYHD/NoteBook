@@ -6,6 +6,7 @@ import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * Created by dreamY on 2017/5/10.
@@ -38,6 +39,12 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
 
         View mView=getView(viewId);
         mView.setOnClickListener(mOnClickListener);
+    }
+    public void setText(int viewId,String text){
+        View mView=getView(viewId);
+        if (mView instanceof TextView) {
+            ((TextView) mView).setText(text);
+        }
     }
 
 }

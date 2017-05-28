@@ -23,7 +23,7 @@ public class PlanAdapter extends BaseRecyclerAdapter<PlanBean> {
     }
 
     @Override
-    protected void onBind(BaseViewHolder mHolder, PlanBean mPlanBean, int mPosition) {
+    protected void onBind(BaseViewHolder mHolder, PlanBean mPlanBean, int mPosition, OnClickerListener mOnClickerListener) {
 
     }
 

@@ -19,11 +19,11 @@ public interface WritingContract {
         /**
          * 展示标题
          */
-        void showTitle(WritingBean mWritingBean);
+        void showTitle(List<WritingBean> mWritingBeanList);
         /**
          *展示内容
          */
-        void showContent(WritingBean mWritingBean);
+        void showContent(List<WritingBean> mWritingBeanList);
 
     }
     interface Model extends BaseModel{
@@ -42,6 +42,6 @@ public interface WritingContract {
         /**
          * 读文章
          */
-        abstract void readingFunction(WritingBean mWritingBean);
+        abstract void readingFunction();
     }
 }

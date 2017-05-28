@@ -3,6 +3,7 @@ package com.example.administrator.notebook.base;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
@@ -12,9 +13,13 @@ import java.util.List;
  */
 
 public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHolder> {
-    protected int layoutId;
-    protected Context mContext;
-    protected List<T>mTList;
+    private int layoutId;
+    private Context mContext;
+    private List<T>mTList;
+    private OnClickerListener mOnClickerListener;
+    public interface OnClickerListener{
+        void click();
+    }
 
     public List<T> getTList() {
         return mTList;
@@ -22,6 +27,10 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseVi
 
     public void setTList(List<T> mTList) {
         this.mTList = mTList;
+
+    }
+    public void setOnClickerListener(OnClickerListener mOnClickerListener){
+        this.mOnClickerListener=mOnClickerListener;
 
     }
 
@@ -39,11 +48,11 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseVi
     @Override
     public void onBindViewHolder(BaseViewHolder holder, int position) {
 
-        onBind(holder,mTList.get(position),position);
+        onBind(holder,mTList.get(position),position,mOnClickerListener);
 
     }
 
-    protected abstract void onBind(BaseViewHolder mHolder, T mT, int mPosition);
+    protected abstract void onBind(BaseViewHolder mHolder, T mT, int mPosition,OnClickerListener mOnClickerListener);
 
 
     @Override

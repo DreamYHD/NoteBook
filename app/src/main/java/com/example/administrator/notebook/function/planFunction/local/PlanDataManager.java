@@ -9,18 +9,18 @@ import com.example.administrator.notebook.local.LocalManager;
 
 public class PlanDataManager extends BaseData<PlanBean,PlanBeanDao> {
     @Override
-    protected PlanBeanDao getBeanDao() {
+    public PlanBeanDao getBeanDao() {
         return LocalManager.getInstance().getDaoSession().getPlanBeanDao();
     }
     @Override
-    protected void update(long id,PlanBean mPlanBean) {
+    public void update(long id, PlanBean mPlanBean) {
         PlanBean m=findById(id);
         m.setContent(mPlanBean.getContent());
         m.setTime(mPlanBean.getTime());
         getBeanDao().update(m);
     }
     @Override
-    protected PlanBean findById(long id) {
+    public PlanBean findById(long id) {
         return getBeanDao().queryBuilder()
                 .where(PlanBeanDao.Properties.Id.eq(id)).build().unique();
     }

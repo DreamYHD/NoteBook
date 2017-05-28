@@ -13,7 +13,7 @@ public class WritingPresenter extends WritingContract.Presenter {
     }
 
     @Override
-    void readingFunction(WritingBean mWritingBean) {
+    void readingFunction() {
 
     }
 }
